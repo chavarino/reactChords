@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./Home"
-
+import Grupos from "./grupos/Grupos"
 
 let About =() =>
 {
@@ -23,13 +23,13 @@ class Header extends Component {
     */
     render() {
         return (
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <Link to="/"  >Inicio</Link>
+            <ul className="nav justify-content-end">
+                <li className="nav-item">
+                    <Link to="/" >Inicio</Link>
                     
                 </li>
-                <li class="nav-item">
-                    <Link to="/chords/"  >Canciones</Link>
+                <li className="nav-item">
+                    <Link to="/grupos/"  >Grupos</Link>
                     
                 </li>
                 
@@ -52,10 +52,10 @@ class Routes extends Component{
         return (
         <Router>
             <div>
-                <Header />
+                <Header/>
 
                 <Route exact path="/" component={Home} />
-                <Route path="/chords/list" component={Chords} />
+                <Route path="/grupos" component={Grupos} />
                
             </div>
         </Router>);
